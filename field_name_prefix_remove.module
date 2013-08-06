@@ -18,5 +18,5 @@ function field_name_prefix_remove_form_field_ui_field_overview_form_alter(&$form
  */
 function field_name_prefix_remove_form_field_ui_field_overview_form_remove_field_prefix(&$form, &$form_state) {
   $field_name =& $form_state['values']['fields']['_add_new_field']['field_name'];
-  $field_name = str_replace('field_', '', $field_name);
+  $field_name = preg_replace('/^field_/', '', $field_name);
 }
