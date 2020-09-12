@@ -3,4 +3,4 @@ type: module
 description: Removes field_ prefixes from automatically being created by the Field UI.
 package: Custom
 core: 8.x
-version: 8.x-1.0
+core_version_requirement: ^8 || ^9
