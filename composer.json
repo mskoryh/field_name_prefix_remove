@@ -1,0 +1,15 @@
+{
+  "name": "drupal/field_name_prefix_remove",
+  "type": "drupal-module",
+  "description": "Removes field_ prefixes from automatically being created by the Field UI.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/field_name_prefix_remove",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/field_name_prefix_remove",
+    "source": "http://cgit.drupalcode.org/field_name_prefix_remove"
+  },
+  "require": { }
+}
+
