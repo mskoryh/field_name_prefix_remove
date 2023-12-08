@@ -2,5 +2,4 @@ name: Field Name Prefix Remove
 type: module
 description: Removes field_ prefixes from automatically being created by the Field UI.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 | ^10
