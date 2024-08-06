@@ -5,6 +5,9 @@
  * For: field_ui_field_storage_add_form
  */
 function field_name_prefix_remove_form_field_ui_field_storage_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (!isset($form['new_storage_wrapper'])) {
+    return;
+  }
 
   //Remove the unnecessary field_ prefix.
   $language = \Drupal::languageManager()->getCurrentLanguage();
@@ -12,6 +15,8 @@ function field_name_prefix_remove_form_field_ui_field_storage_add_form_alter(&$f
 
   // Attach validate function to prevent adding the field_ prefix.
   $form['#validate'][] = 'field_name_prefix_remove_form_field_ui_field_overview_form_remove_field_prefix';
+  $form['actions']['submit']['#validate'][] = 'field_name_prefix_remove_form_field_ui_field_overview_form_remove_field_prefix';
+
 
   // Increase maximum characters to 32 as per database constraint
   $form['new_storage_wrapper']['field_name']['#maxlength'] = 32;
